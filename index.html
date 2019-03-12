@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<!-- <link rel="stylesheet" href="css/materialize.min.css"> -->
+	<script src="js/jquery1.42.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/sc.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+			//banner
+			jQuery(".slideBox").slide({
+				mainCell: ".bd ul",
+				effect: "leftLoop",
+				autoPlay: true,
+			});
+			//新闻中心
+			jQuery(".inBox").slide({
+				titCell: ".inHd li",
+				mainCell: ".inBd"
+
+			});
+			jQuery(".outBox").slide({
+				effect: "left"
+			});
+
+			jQuery(".inBox").slide({
+					mainCell: ".inBd ul",
+					autoPlay: true,
+					effect: "leftLoop", 
+					vis: 1,
+					interTime: 2000,
+					opp: true,
+				});
+		})
+	</script>
+	<style>
+		.container{  
+        width:400px;  
+        height: 240px;
+        margin:20px auto;  
+        overflow: hidden;  
+        position: relative;  
+        border: 1px solid red;
+    }  
+    .container .imgcss{  
+        animation:scoll 6s linear 0s infinite;  
+    } 
+    .container .textcss {
+        animation:textScroll 6s linear 0s infinite;  
+    }
+    .container ul {
+        width:4000px;  
+        left:0;  
+        top:0;  
+        position: absolute;  
+    }
+    .container ul:hover {
+        animation-play-state: paused;
+    } 
+    .container ul li{  
+        float:left;  
+    }  
+    @keyframes scoll{  
+        from{  
+            left:0;  
+        }  
+        to{  
+            left:-960px;  
+        }  
+    }   
+    @keyframes textScroll{  
+        from{  
+            left:0;  
+        }  
+        to{  
+            left:-986px;  
+        }  
+    }   
+		/* .header {
+	position: absolute;
+	top: 0px;
+	height: auto; /*高度可以不写，可以通过内部元素撑开，但是需要考虑是否会与自适应部分发生重合*/
+
+		</style>
+</head>
+
+<body>
+	<!--顶部-->
+	<div class="header">
+		<div class="nav_top">
+			<div class="nav_top_in">
+				<p>河南鼎稳通信技术有限公司 欢迎您！！！</p>
+				<ul>
+					<li>
+						<a href="javascript:void(0)" onClick="SetHome(this,window.location)">设为首页</a>
+					</li>
+					<li>
+						<a href="">联系我们</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--logo-->
+		<div class="logo" id="logo">
+			<a href=""><img src="img/logo.png" /></a>
+			<img src="img/dh1.png" />
+		</div>
+		<!--导航-->
+		<div class="nav_bj">
+			<div class="nav">
+				<ul>
+					<li class="on">
+						<a href="">首 页</a>
+					</li>
+					<li>
+						<a href="#aboutus">关于我们</a>
+					</li>
+					<li>
+						<a href="#business">业务内容</a>
+					</li>
+					<li>
+						<a href="#CompanyNews">公司动态</a>
+					</li>
+					<li>
+						<a href="#Classiccase">经典案例</a>
+					</li>
+					<li>
+						<a href="#ContactUS">联系我们</a>
+					</li>
+				</ul>
+				<div class="search">
+					<input type="text" class="sea" name="" id="" value="请输入关键字" onFocus="if(this.value==this.defaultValue){this.value='';};"
+					 onBlur="if(this.value==''){this.value=this.defaultValue;}" />
+					<input type="submit" class="but" name="" id="" value="" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--banner-->
+	<div id="slideBox" class="slideBox">
+		<div class="hd">
+			<ul>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="bd">
+			<ul>
+				<li>
+					<a href=" "><img src="img/banner1.jpg" /></a>
+				</li>
+				<li>
+					<a href=" "><img src="img/banner1.jpg" /></a>
+				</li>
+			</ul>
+		</div>
+		<!--前/后按钮-->
+		<a class="prev" href="javascript:void(0)"></a>
+		<a class="next" href="javascript:void(0)"></a>
+	</div>
+	<!--企业文化-->
+	<div class="index_1">
+		<dl>
+			<a href=""><img src="img/wh_1.jpg" /></a>
+			<dt>企业文化</dt>
+			<dd>河南鼎稳通信技术有限公司成立于2011年3月，总部位于河南省郑州，始终坚持“重质量、讲信誉、服务第一、争创一流”的经营管理理念......</dd>
+		</dl>
+		<dl>
+			<a href=""><img src="img/wh_2.jpg" /></a>
+			<dt>服务承诺</dt>
+			<dd>河南鼎稳通信技术有限公司成立于2011年3月，总部位于河南省郑州，始终坚持“重质量、讲信誉、服务第一、争创一流”的经营管理理念......</dd>
+		</dl>
+		<dl>
+			<a href=""><img src="img/wh_3.jpg" /></a>
+			<dt>组织机构</dt>
+			<dd>河南鼎稳通信技术有限公司成立于2011年3月，总部位于河南省郑州，始终坚持“重质量、讲信誉、服务第一、争创一流”的经营管理理念......</dd>
+		</dl>
+	</div>
+	<!--关于我们-->
+	<section id="aboutus" class="section-padding clearfix">
+		<div class="index_2">
+			<dl class="tit">
+				<dt>关于鼎稳通信</dt>
+				<dd>ABOUT US</dd>
+			</dl>
+			<h3>为客户提供最优质的整体解决方案</h3>
+			<p>河南鼎稳通信技术有限公司成立于2011年3月，经河南省住房和城乡建设厅审核批准，获得通信工程施工总承包叁级资质，建筑施工安全生产许可证。经营范围：通信信息网络系统集成、通信工程设计施工；计算机软硬件开发、其他计算机系统服务；汽车租赁；仓库内的货物装卸服务。河南鼎稳通信技术有限公司设有工程部、业务部、质量安全部、财务部、办公室以及十多个施工队伍，拥有一级建造师证、二级建造师证、施工八大员证，安全员证、登高证、电工证、费用编制人员等专业人员，分别在河南省新郑市、新乡市、安阳市、南阳、鹤壁等地成立办事处。本公司自成立以来，始终坚持“重质量、讲信誉、服务第一、争创一流”的经营管理理念。在通信公司各级部门的大力支持下，经过这几年的发展，我公司已经具备了一定的规模，技术力量也相当雄厚。公司现有线路工程高级职称的工程师5人，项目经理15人，概预算编制人员13人，综合布线安装工程师15人；初级以上职称的26人，技术工人80多人。公司通过对新技术的吸纳及人才的聘用，使公司的结构和管理体制更趋于合理化，从而保证了公司在激烈的市场竞争中处于有利地位。
+			</p>
+			<!-- <br/>//换行符号 -->
+			<br />
+			<br />
+			<ul>
+				<li><img src="img/gy_1.jpg" /></li>
+				<li><img src="img/gy_2.jpg" /></li>
+				<li><img src="img/gy_3.jpg" /></li>
+				<li><img src="img/gy_1.jpg" /></li>
+				<li><img src="img/gy_2.jpg" /></li>
+				<li><img src="img/gy_3.jpg" /></li>
+			</ul>
+			<br />
+			<br />
+		</div>
+	</section>
+	<!--业务内容-->
+	<section id="business" class="section-padding clearfix">
+		<div class="index_3">
+			<dl class="tit">
+				<dt>通信业务内容</dt>
+				<dd>business</dd>
+			</dl>
+			<div class="index_3_in">
+				<a href="">
+					<dl>
+						<dt><img src="img/yw_1.png" /></dt>
+						<dd>
+							<h2>线路施工</h2>
+							<span>Line construction</span>
+							<p>根据通信线路施工技术规范手册，已批准的施工图设计为依据......</p>
+						</dd>
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="img/yw_2.png" /></dt>
+						<dd>
+							<h2>设备安装</h2>
+							<span>Equipment installation</span>
+							<p>可以分为中央投资项目招标代理机构、工程建设项目招......</p>
+						</dd>
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="img/yw_3.png" /></dt>
+						<dd>
+							<h2>线路设备维护</h2>
+							<span>Maintenance of line equipment</span>
+							<p>根据招标文件要求承担本工程施工阶段和保修阶段的......</p>
+						</dd>
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="img/yw_4.png" /></dt>
+						<dd>
+							<h2>线路勘察设计</h2>
+							<span>Line survey and design</span>
+							<p>通信线路规划应以城市发展规划和通信建设总体规划为依据......</p>
+						</dd>
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="img/yw_5.png" /></dt>
+						<dd>
+							<h2>网络优化</h2>
+							<span>Network optimization</span>
+							<p>为进一步加强保密实验室涉密设备保密管理工作，杜绝......</p>
+						</dd>
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="img/yw_6.png" /></dt>
+						<dd>
+							<h2>管道施工</h2>
+							<span>Pipeline construction</span>
+							<p>经过多年的企业实践和研究，明确各自的分工和职责......</p>
+						</dd>
+					</dl>
+				</a>
+			</div>
+		</div>
+	</section>
+	<!--公司动态-->
+	<section id="CompanyNews" class="section-padding clearfix">
+		<div class="index_3">
+			<dl class="tit">
+				<dt>公司动态</dt>
+				<dd>Company News</dd>
+			</dl>
+
+			<div class="outBox">
+				<div class="bd">
+					<div class="inBox">
+						<div class="inHd">
+							<ul>
+								<li>
+									<a href="">中华人民共和国招标投标法</a><span>2016/9/29</span></li>
+								<li>
+									<a href="">工程造价咨询单位管理办法</a><span>2016/9/29</span></li>
+								<li>
+									<a href="">西安市阎良污水处理厂二期工程施工项目招标公告</a><span>2016/9/29</span></li>
+								<li>
+									<a href="">渭南市临渭区猕猴桃产业项目</a><span>2016/9/29</span></li>
+								<li>
+									<a href="">西北税务学校操场改造及绿化</a><span>2016/9/29</span></li>
+								<li>
+									<a href="">中华人民共和国建筑法</a><span>2016/9/29</span></li>
+								<li>
+									<a href="">陕西省环保厅眉县废物库（基地）三期工程中标公示</a><span>2016/9/29</span></li>
+							</ul>
+						</div>
+						<div class="inBd">
+							<ul>
+								<li>
+									<a href="" class="inBd_img"><img src="img/xw_1.jpg" /></a>
+									<p>《1中华人民共和国招标投标法》已由中华人民共和国第九届全国人民代表大会常务委员会第十一次会议......</p>
+
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<a href="" class="inBd_img"><img src="img/xw_1.jpg" /></a>
+									<p>《2中华人民共和国招标投标法》已由中华人民共和国第九届全国人民代表大会常务委员会第十一次会议......</p>
+									<a href="" class="more2">查看详情</a>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<a href="" class="inBd_img"><img src="img/xw_1.jpg" /></a>
+									<p>《3中华人民共和国招标投标法》已由中华人民共和国第九届全国人民代表大会常务委员会第十一次会议......</p>
+									<a href="" class="more2">查看详情</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--经典案例-->
+
+	<!--联系我们-->
+
+	<!--底部-->
+	<div class="nav_bj">
+		<div class="nav">
+			<ul>
+				<li>
+					<a href="">首 页</a>
+				</li>
+				<li>
+					<a href="#aboutus">关于我们</a>
+				</li>
+				<li>
+					<a href="#business">业务内容</a>
+				</li>
+				<li>
+					<a href="#CompanyNews">公司动态</a>
+				</li>
+				<li>
+					<a href="#Classiccase">经典案例</a>
+				</li>
+				<li>
+					<a href="#ContactUS">联系我们</a>
+				</li>
+			</ul>
+			<a class="top" href="#logo">返回顶部</a>
+		</div>
+	</div>
+	<div class="footer_bj">
+		<div class="footer">
+			<!-- <p> -->
+			<p>
+				<a href=""> 河南鼎稳通信技术有限公司<br />
+					公司地址：河南省郑州市金水区经三路北99号附1号2号楼23层2306号<br />
+					Email: hndw@hndw.com.cn </a></p>
+			<!-- <a href="">陕西易合一科技有限公司<br/>公司地址：陕西省西安市太白南路荣禾云图中心<br/>Email: 910253720@qq.com | 联系手机：13688886666<br/>技术支持：
+					<a href="">易合一科技</a>
+				</p> -->
+			<img class="dh" src="img/dh2.png" />
+		</div>
+	</div>
+	<!-- <script>
+		var wrapper = document.querySelector('.inBd');
+		var els = wrapper.querySelectorAll('ul');
+		var defaultIndex = 0;
+		var curIndex = 0;
+		for (var i = 0; i < els.length; i++) {
+			els[i].style.left = (15 + (i - defaultIndex) * 70) + '%'
+			if (i === defaultIndex) {
+				els[i].className = 'current'
+			} else if (i === defaultIndex - 1) {
+				els[i].className = 'pre'
+			} else if (i === defaultIndex + 1) {
+				els[i].className = 'next'
+			}
+		};
+
+		function toNext() {
+			if (curIndex >= els.length - 1) {
+				return
+			}
+			curIndex++
+			change()
+		}
+
+		function toPre() {
+			if (curIndex <= 0) {
+				return
+			}
+			curIndex--
+			change()
+		}
+
+		function change() {
+			var translateX = -(curIndex - defaultIndex) * 70 + '%'
+			wrapper.style.transform = 'translate(' + translateX + ', 0)'
+			wrapper.webkitTransform = 'translate(' + translateX + ', 0)'
+			els[curIndex].className = 'current'
+			if (curIndex !== els.length - 1) {
+				els[curIndex + 1].className = 'next'
+			}
+			if (curIndex !== 0) {
+				els[curIndex - 1].className = 'pre'
+			}
+		}
+		var i = 0
+		var interval = setInterval(function () {
+			toNext()
+			if (i === 2) {
+				clearInterval(interval)
+				setInterval(function () {
+					toPre()
+				}, 1000)
+			}
+			i++
+		}, 1000)
+	</script> -->
+</body>
+
+</html>

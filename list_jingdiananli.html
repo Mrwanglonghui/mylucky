@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/list_2.css" />
+		<script src="js/jquery1.42.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/sc.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				//banner
+				jQuery(".slideBox").slide({
+					mainCell: ".bd ul",
+					effect: "leftLoop",
+					autoPlay: true,
+				});
+				//内页案例滚动
+				jQuery(".picMarquee-top").slide({
+					mainCell: ".bd ul",
+					autoPlay: true,
+					effect: "topMarquee",
+					vis: 3,
+					interTime: 50,
+					opp: true,
+				});
+			})
+		</script>
+	</head>
+
+	<body>
+		<!--顶部-->
+		<div class="nav_top">
+			<div class="nav_top_in">
+				<p>河南鼎稳通信技术有限公司 欢迎您！！！</p>
+				<ul>
+					<li>
+						<a href="javascript:void(0)" onClick="SetHome(this,window.location)">设为首页</a>
+					</li>
+					<li>
+						<a href="">联系我们</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--logo-->
+		<div class="logo" id="logo">
+			<a href=""><img src="img/logo.png" /></a>
+			<img src="img/dh1.png" />
+		</div>
+		<!--导航-->
+		<div class="nav_bj">
+			<div class="nav">
+				<ul>
+					<li >
+						<a href="">首 页</a>
+					</li>
+					<li>
+						<a href="">关于我们</a>
+						<ol>
+							<li>
+								<a href="">公司介绍</a>
+							</li>
+							<li>
+								<a href="">公司理念</a>
+							</li>
+							<li>
+								<a href="">法人致辞</a>
+							</li>
+							<li>
+								<a href="">机构组织</a>
+							</li>
+						</ol>
+					</li>
+					<li>
+						<a href="">业务内容</a>
+					</li>
+					<li>
+						<a href="">公司动态</a>
+						<ol>
+							<li>
+								<a href="">法律法规</a>
+							</li>
+							<li>
+								<a href="">公司动态</a>
+							</li>
+							<li>
+								<a href="">公告通知</a>
+							</li>
+							<li>
+								<a href="">招标公告</a>
+							</li>
+							<li>
+								<a href="">中标公示</a>
+							</li>
+						</ol>
+					</li>
+					<li class="on">
+						<a href="">经典案例</a>
+					</li>
+					
+					<li>
+						<a href="">联系我们</a>
+					</li>
+				</ul>
+				<div class="search">
+					<input type="text" class="sea" name="" id="" value="请输入关键字" onFocus="if(this.value==this.defaultValue){this.value='';};" onBlur="if(this.value==''){this.value=this.defaultValue;}" />
+					<input type="submit" class="but" name="" id="" value="" />
+				</div>
+			</div>
+		</div>
+		<!--banner-->
+		<div id="slideBox" class="slideBox">
+			<div class="hd">
+				<ul>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<div class="bd">
+				<ul>
+					<li>
+						<a href=" "><img src="img/banner1.jpg" /></a>
+					</li>
+					<li>
+						<a href=" "><img src="img/banner1.jpg" /></a>
+					</li>
+				</ul>
+			</div>
+			<!--前/后按钮-->
+			<a class="prev" href="javascript:void(0)"></a>
+			<a class="next" href="javascript:void(0)"></a>
+		</div>
+		<!--内页-->
+		<div class="inside">
+			<div class="inside_left">
+				<div class="inside_left_1 inside_left_nav">
+					<h2>经典案例</h2>
+					<ul>
+						<li>--
+							<a href="">安全生产</a> --
+						</li>
+						<li>--
+							<a href="">光缆熔接</a> --
+						</li>
+						<li>--
+							<a href="">网络传输工程</a> --
+						</li>
+					</ul>
+				</div>
+				<div class="inside_left_1">
+					<h2>新闻中心<a href="" class="more">更多>></a></h2>
+					<ul>
+						<li>•
+							<a href="">中华人民共和国招标投标法</a>
+						</li>
+						<li>•
+							<a href="">安全生产管理办法</a>
+						</li>
+						<li>•
+							<a href="">新乡15家客工程南关村基站-北关村光交</a>
+						</li>
+						<li>•
+							<a href="">新乡16本地网一期（接入区）</a>
+						</li>
+						<li>•
+							<a href="">中国移动河南公司郑州分公司4G网络四期传输工程</a>
+						</li>
+						<li>•
+							<a href="">郑州移动4G 网络三期传输工程</a>
+						</li>
+						<li>•
+							<a href="">中国移动河南公司郑州分公司4G网络四期传输工程</a>
+						</li>
+					</ul>
+				</div>
+				<div class="picMarquee-top inside_left_1">
+					<h2>经典案例<a href="" class="more">更多>></a></h2>
+					<div class="bd">
+						<ul>
+							<li>
+								<a href="">
+									<img src="img/cp_1.jpg" />
+									<p>安全生产培训</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/cp_2.jpg" />
+									<p>安全生产会议总结</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/cp_3.jpg" />
+									<p>光缆熔接现场</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/cp_4.jpg" />
+									<p>光缆熔接会议</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="inside_right">
+				<div class="inside_right_top">
+					<a href="" class="home">首页</a>
+					<i>>></i>
+					<a href="">经典案例</a>
+					<i>>></i>
+					<a href="">安全生产</a>
+				</div>
+				<ul class="inside_pic">
+					<li>
+						<a href="" class="img"><img src="img/cp_1.jpg" /></a>
+						<a href="">安全生产培训</a>
+					</li>
+					<li>
+						<a href="" class="img"><img src="img/cp_2.jpg" /></a>
+						<a href="">安全生产会议总结</a>
+					</li>
+					<li>
+						<a href="" class="img"><img src="img/cp_3.jpg" /></a>
+						<a href="">光缆熔接现场</a>
+					</li>
+					<li>
+						<a href="" class="img"><img src="img/cp_2.jpg" /></a>
+						<a href="">光缆熔接会议</a>
+					</li>
+				</ul>
+				<!--翻页-->
+				<div class="Flip">
+					<a href="">首页</a>
+					<a href="">上一页</a>
+					<a href="">1</a>
+					<a href="" class="on">2</a>
+					<a href="">3</a>
+					<a id="Flip_6">...</a>
+					<a href="">下一页</a>
+					<a href="">尾页</a>
+				</div>
+			</div>
+		</div>
+		<!--底部-->
+		<div class="nav_bj">
+			<div class="nav">
+				<ul>
+					<li>
+						<a href="">首 页</a>
+					</li>
+					<li>
+						<a href="">关于我们</a>
+					</li>
+					<li>
+						<a href="">业务内容</a>
+					</li>
+					<li>
+						<a href="">公司动态</a>
+					</li>
+					<li>
+						<a href="">经典案例</a>
+					</li>
+					
+					<li>
+						<a href="">联系我们</a>
+					</li>
+				</ul>
+				<a class="top" href="#logo">返回顶部</a>
+			</div>
+		</div>
+		<div class="footer_bj">
+			<div class="footer">
+				<p>
+					<a href="">河南鼎稳通信技术有限公司</a> <br/>公司地址：河南省郑州市金水区经三路北99号附1号2号楼23层2306号<br/>Email: hndw@hndw.com.cn </p>
+				<img class="dh" src="img/dh2.png" />
+		  </div>
+		</div>
+	</body>
+
+</html>
